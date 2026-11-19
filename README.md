@@ -15,14 +15,14 @@ Across the 2022-2025 regular seasons (128 team-seasons), **passing efficiency wa
 | 2025 | 0.27 | 0.65 |
 | All four seasons | 0.34 | 0.72 |
 
-![EPA vs win percentage, 2022-2025](images/epa_vs_wins_multi_season.png)
+![EPA vs win percentage, 2022-2025](notebooks/images/epa_vs_wins_multi_season.png)
 
 Rushing and passing efficiency were only moderately related to each other (r = 0.42), so a team can be strong at one and weak at the other. In 2025, for example, Indianapolis and Baltimore had the league's best rushing efficiency but finished near .500, while New England, Seattle and Denver won over 80% of their games with below-average rushing efficiency.
 
 ## A sensitivity check
 In the 2025 season alone, the rushing relationship (r = 0.27) was driven largely by one outlier. With Las Vegas removed, it dropped to r = 0.10. This is a reminder that a single extreme team can create the look of a trend in a 32-team sample.
 
-![2025 with and without Las Vegas](images/rush_epa_vs_wins_comparison.png)
+![2025 with and without Las Vegas](notebooks/images/rush_epa_vs_wins_comparison.png)
 
 ## Data
 Play-by-play data from [nflverse](https://github.com/nflverse), loaded with the `nflreadpy` Python package. Regular season only. QB scrambles are excluded from rushing plays.
@@ -44,4 +44,4 @@ Play-by-play data from [nflverse](https://github.com/nflverse), loaded with the 
 - Build a model that predicts the success of individual rushing plays
 
 ## How to run
-Open `01_team_rushing_efficiency.ipynb` in Jupyter and run all cells. Requires Python 3.10+ and the packages `nflreadpy`, `pandas`, `matplotlib`, `seaborn` and `pyarrow`.
+Open [`notebooks/team_rushing_efficieny.ipynb`](notebooks/team_rushing_efficieny.ipynb) in Jupyter and run all cells. Requires Python 3.10+ and the packages `nflreadpy`, `pandas`, `matplotlib`, `seaborn` and
