@@ -28,6 +28,11 @@ In the 2025 season alone, the rushing relationship (r = 0.27) was driven largely
 
 ![All plays vs neutral situations](notebooks/images/neutral_vs_all_plays.png)
 
+## Follow-up: is efficiency repeatable?
+[`notebooks/03_year_over_year_stability.ipynb`](notebooks/03_year_over_year_stability.ipynb) asks whether a team's efficiency carries over from one season to the next (96 season pairs, 2022-2025). Passing EPA was more stable than rushing EPA (r = 0.42 vs. 0.25), and last season's passing EPA predicted next season's win percentage about as well as last season's record did (r = 0.36 vs. 0.32), while rushing EPA was a weak predictor (r = 0.12). Filtering to neutral game situations did not improve stability for either metric, likely because it shrinks the sample of plays per team.
+
+![Year-over-year stability of rushing and passing EPA](notebooks/images/year_over_year_stability.png)
+
 ## Data
 Play-by-play data from [nflverse](https://github.com/nflverse), loaded with the `nflreadpy` Python package. Regular season only. QB scrambles are excluded from rushing plays.
 
