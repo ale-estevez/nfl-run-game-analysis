@@ -1,4 +1,3 @@
-# nfl-run-game-analysis
 # Does Rushing Efficiency Predict Winning in the NFL?
 
 ## Question
