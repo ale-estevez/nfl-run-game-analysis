@@ -24,12 +24,12 @@ In the 2025 season alone, the rushing relationship (r = 0.27) was driven largely
 ![2025 with and without Las Vegas](notebooks/images/rush_epa_vs_wins_comparison.png)
 
 ## Follow-up: controlling for game situation
-[`notebooks/neutral_game_script_rushing.ipynb`](notebooks/neutral_game_script_rushing.ipynb) repeats the analysis using only neutral game situations (win probability 20-80%, more than two minutes left in the half, no overtime), which keeps 56% of all plays. Rushing's correlation with win percentage rose from r = 0.35 to r = 0.48, while passing's fell from r = 0.72 to r = 0.64. Passing remains the stronger predictor, but the gap narrows considerably. The rushing result held across alternative cutoffs (r = 0.47 to 0.49).
+[`notebooks/02_neutral_game_script_rushing.ipynb`](notebooks/02_neutral_game_script_rushing.ipynb) repeats the analysis using only neutral game situations (win probability 20-80%, more than two minutes left in the half, no overtime), which keeps 56% of all plays. Rushing's correlation with win percentage rose from r = 0.35 to r = 0.48, while passing's fell from r = 0.72 to r = 0.64. Passing remains the stronger predictor, but the gap narrows considerably. The rushing result held across alternative cutoffs (r = 0.47 to 0.49).
 
 ![All plays vs neutral situations](notebooks/images/neutral_vs_all_plays.png)
 
 ## Follow-up: is efficiency repeatable?
-[`notebooks/stability_and_point_differential.ipynb`](notebooks/stability_and_point_differential.ipynb) asks whether a team's efficiency carries over from one season to the next (96 season pairs, 2022-2025). Passing EPA was more stable than rushing EPA (r = 0.42 vs. 0.25), and last season's passing EPA predicted next season's win percentage about as well as last season's record did (r = 0.36 vs. 0.32), while rushing EPA was a weak predictor (r = 0.12). Filtering to neutral game situations did not improve stability for either metric, likely because it shrinks the sample of plays per team.
+[`notebooks/03_year_over_year_stability.ipynb`](notebooks/03_year_over_year_stability.ipynb) asks whether a team's efficiency carries over from one season to the next (96 season pairs, 2022-2025). Passing EPA was more stable than rushing EPA (r = 0.42 vs. 0.25), and last season's passing EPA predicted next season's win percentage about as well as last season's record did (r = 0.36 vs. 0.32), while rushing EPA was a weak predictor (r = 0.12). Filtering to neutral game situations did not improve stability for either metric, likely because it shrinks the sample of plays per team.
 
 ![Year-over-year stability of rushing and passing EPA](notebooks/images/year_over_year_stability.png)
 
@@ -53,4 +53,10 @@ Play-by-play data from [nflverse](https://github.com/nflverse), loaded with the 
 - Build an interactive dashboard of team run-game scouting reports
 
 ## How to run
-Open [`notebooks/team_rushing_efficieny.ipynb`](notebooks/team_rushing_efficieny.ipynb) and [`notebooks/neutral_game_script_rushing.ipynb`](notebooks/neutral_game_script_rushing.ipynb) in Jupyter and run all cells. Requires Python 3.10+ and the packages `nflreadpy`, `pandas`, `matplotlib`, `seaborn` and `pyarrow`.
+Open the notebooks in order: [`notebooks/01_team_rushing_efficiency.ipynb`](notebooks/01_team_rushing_efficiency.ipynb), [`notebooks/02_neutral_game_script_rushing.ipynb`](notebooks/02_neutral_game_script_rushing.ipynb) and [`notebooks/03_year_over_year_stability.ipynb`](notebooks/03_year_over_year_stability.ipynb). Run all cells in Jupyter. Requires Python 3.10+ and the packages `nflreadpy`, `pandas`, `matplotlib`, `seaborn` and `pyarrow`.
+
+
+
+
+
+
